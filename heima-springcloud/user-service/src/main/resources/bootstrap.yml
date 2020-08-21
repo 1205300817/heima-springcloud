@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      # 配置文件命名方式：{application}-{profile}.yml
+      # 与仓库中配置文件的application保持一致
+      name: user
+      # 与仓库中配置文件的profile保持一致
+      profile: dev
+      # 与仓库中配置文件所属分支保持一致
+      label: master
+      discovery:
+        # 配置中心生效
+        enabled: true
+        # 配置中心服务名
+        service-id: config-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka

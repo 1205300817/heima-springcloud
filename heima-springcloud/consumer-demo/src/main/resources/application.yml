@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: consumer-demo
+eureka:
+  client:
+    service-url:
+#      eureka 服务地址
+      defaultZone: http://localhost:10086/eureka
+#      获取服务地址列表间隔时间，默认30s
+    registry-fetch-interval-seconds: 10
